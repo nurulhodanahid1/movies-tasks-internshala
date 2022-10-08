@@ -13,7 +13,7 @@ export const apiSlice = createApi({
 				let queryString = "";
 				if (page) queryString += `page=${page}`
 				return {
-					url: `/popular?${queryString}`
+					url: `/popular?${queryString}&query=${year}`
 				};
 
 			},
