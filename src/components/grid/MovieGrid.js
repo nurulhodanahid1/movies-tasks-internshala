@@ -8,9 +8,6 @@ export default function VideGrid() {
     const { year, rating, page, search } = useSelector(state => state.filters);
     const { data, isLoading, isError } = useGetMoviesQuery({ year, rating, page, search });
 
-    console.log(data)
-    // console.log(data?.data.results)
-
     // decide what to render
     let content = null;
 

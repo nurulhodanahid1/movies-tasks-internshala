@@ -8,8 +8,6 @@ export default function SearchedMoviesGrid() {
     const { search, page } = useSelector(state => state.filters);
     const { data, isLoading, isError } = useGetSearchedMoviesQuery({ search, page });
 
-    console.log(data);
-
     // decide what to render
     let content = null;
 

@@ -11,9 +11,6 @@ const filterSlice = createSlice({
         setYear: (state, action) => {
             state.year = action.payload;
         },
-        setRating: (state, action) => {
-            state.rating = action.payload;
-        },
         setPage: (state, action) => {
             state.page = action.payload;
         },
@@ -25,4 +22,4 @@ const filterSlice = createSlice({
 });
 
 export default filterSlice.reducer;
-export const { setYear, setRating, setPage, setSearch } = filterSlice.actions;
+export const { setYear, setPage, setSearch } = filterSlice.actions;

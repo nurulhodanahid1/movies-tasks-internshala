@@ -5,8 +5,8 @@ export default function Pagination({totalPages}) {
     const { page: currentPage } = useSelector(state => state.filters);
     const dispatch = useDispatch();
     const totalPage = Math.ceil(totalPages / 1);
+    
     let middlePagination;
-
     if (totalPage <= 5) {
         middlePagination = [...Array(totalPage)].map((_, index) => (
             <button

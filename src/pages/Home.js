@@ -12,7 +12,7 @@ export default function Home() {
             <SelectDate />
             <MovieGrid />
             {
-                data?.data?.total_pages && <Pagination totalPages={data.data.total_pages} />
+                data?.data?.total_pages && <Pagination totalPages={500} />
             }
         </>
     );

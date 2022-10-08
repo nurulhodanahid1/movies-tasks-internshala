@@ -13,16 +13,16 @@ export const apiSlice = createApi({
 				let queryString = "";
 				if (page) queryString += `page=${page}`
 				return {
-					url: `/popular?${queryString}&query=${year}`
+					url: `/popular?${queryString}`
 				};
 
 			},
-			providesTags: (result, error, arg) => [{ type: "movies", id: arg.id }],
+			providesTags: (result, error, arg) => [{ type: "movies", id: arg.page }],
 		}),
 
 		getMovie: builder.query({
 			query: ({ movieId }) => `/movie?movieId=${movieId}`,
-			providesTags: (result, error, arg) => [{ type: "movie", id: arg.id }],
+			providesTags: (result, error, arg) => [{ type: "movie", id: arg.movieId }],
 		}),
 
 		getSearchedMovies: builder.query({
@@ -35,7 +35,7 @@ export const apiSlice = createApi({
 				};
 
 			},
-			providesTags: (result, error, arg) => [{ type: "searched", id: arg.id }],
+			providesTags: (result, error, arg) =>  [{ type: "searched", id: arg.page }]
 		}),
 
 	})
